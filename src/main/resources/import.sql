@@ -1,0 +1,1 @@
+INSERT INTO public.transaction_type ( code, description ) VALUES ( 'INGRESO','Es el tipo de movimiento o transaccion para cuando ingresa dinero a alguna cuenta');

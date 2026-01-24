@@ -6,5 +6,5 @@ import java.util.Optional;
 
 public interface TransactionTypeInterface {
 
-    Optional<TransactionType> findByCode(String code);
+    TransactionType findByCode(String code);
 }
