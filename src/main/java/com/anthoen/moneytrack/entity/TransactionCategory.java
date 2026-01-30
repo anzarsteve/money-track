@@ -7,7 +7,7 @@ import lombok.*;
 @Table(name = "transaction_category")
 @Getter @Setter
 @NoArgsConstructor @AllArgsConstructor @Builder
-public class TransactionCategory {
+public class TransactionCategory extends Audit{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

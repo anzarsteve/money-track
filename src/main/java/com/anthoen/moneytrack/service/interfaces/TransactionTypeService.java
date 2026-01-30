@@ -4,7 +4,7 @@ import com.anthoen.moneytrack.entity.TransactionType;
 
 import java.util.List;
 
-public interface TransactionTypeInterface {
+public interface TransactionTypeService {
 
     TransactionType findByCode(String code);
 
@@ -15,8 +15,6 @@ public interface TransactionTypeInterface {
     TransactionType getById(Integer id);
 
     TransactionType update(TransactionType transactionType);
-
-    void softDelete(Integer id);
 
     void delete(Integer id);
 }

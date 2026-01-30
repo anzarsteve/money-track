@@ -1,1 +1,1 @@
-INSERT INTO public.transaction_type ( code, description ) VALUES ( 'INGRESO','Es el tipo de movimiento o transaccion para cuando ingresa dinero a alguna cuenta');
+INSERT INTO public.transaction_type ( code, description, created_by, created_at, updated_by, updated_at, active ) VALUES ( 'INGRESO','Es el tipo de movimiento o transaccion para cuando ingresa dinero a alguna cuenta','system','2026-01-19 20:24:02.896','system','2026-01-19 20:24:02.896', true);

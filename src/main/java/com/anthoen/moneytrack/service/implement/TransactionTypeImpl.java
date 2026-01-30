@@ -2,7 +2,7 @@ package com.anthoen.moneytrack.service.implement;
 
 import com.anthoen.moneytrack.entity.TransactionType;
 import com.anthoen.moneytrack.repository.TransactionTypeRepository;
-import com.anthoen.moneytrack.service.interfaces.TransactionTypeInterface;
+import com.anthoen.moneytrack.service.interfaces.TransactionTypeService;
 import lombok.RequiredArgsConstructor;
 
 import org.springframework.stereotype.Service;
@@ -12,7 +12,7 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
-public class TransactionTypeImplement implements TransactionTypeInterface {
+public class TransactionTypeImpl implements TransactionTypeService {
 
     private final TransactionTypeRepository transactionTypeRepository;
 
@@ -22,8 +22,7 @@ public class TransactionTypeImplement implements TransactionTypeInterface {
 
     @Override
     public TransactionType save(TransactionType transactionType) {
-        TransactionType obj = transactionTypeRepository.save(transactionType);
-        return obj;
+        return transactionTypeRepository.save(transactionType);
     }
 
     @Override
@@ -39,16 +38,13 @@ public class TransactionTypeImplement implements TransactionTypeInterface {
 
     @Override
     public TransactionType update(TransactionType transactionType) {
-        return null;
-    }
-
-    @Override
-    public void softDelete(Integer id) {
-        TransactionType obj = getById(id);
-        if(obj != null) {
-            obj.setActive(false);
-            transactionTypeRepository.save(obj);
+        TransactionType existingObj = getById(transactionType.getId());
+        if(existingObj != null) {
+            existingObj.setCode(transactionType.getCode());
+            existingObj.setDescription(transactionType.getDescription());
+            return transactionTypeRepository.save(existingObj);
         }
+        return null;
     }
 
     @Override
