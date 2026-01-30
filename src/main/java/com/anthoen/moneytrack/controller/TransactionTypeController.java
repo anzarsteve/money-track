@@ -22,8 +22,4 @@ public class TransactionTypeController {
         return ResponseEntity.ok().body(obj);
     }
 
-    @GetMapping("/prueba")
-    public String prueba(){
-        return "hol amundo";
-    }
 }

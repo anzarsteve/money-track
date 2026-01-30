@@ -5,9 +5,12 @@ import lombok.*;
 
 @Entity
 @Table(name = "transaction_type")
-@Getter @Setter
-@NoArgsConstructor @AllArgsConstructor @Builder
-public class TransactionType {
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class TransactionType extends Audit{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
