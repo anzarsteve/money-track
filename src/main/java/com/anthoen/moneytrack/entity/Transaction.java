@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 @Table(name = "transactions")
 @Getter @Setter
 @NoArgsConstructor @AllArgsConstructor @Builder
-public class Transaction {
+public class Transaction extends Audit {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,6 +20,7 @@ public class Transaction {
     private String description;
 
     @Column(nullable = false)
+
     private Integer quantity;
 
     @Column(name = "unit_price", nullable = false, precision = 12, scale = 2)

@@ -5,13 +5,11 @@ spring:
     url: jdbc:postgresql://localhost:5432/moneytrack_db
     username: postgres
     password: postgres
-
   jpa:
     hibernate:
-      ddl-auto: create   # <- importante: NO "update" en proyectos serios
+    #  ddl-auto: create   # <- importante: NO "update" en proyectos serios
     properties:
       hibernate:
         format_sql: true
-
   flyway:
     enabled: true

@@ -1,9 +1,18 @@
--- TRANSACTION TYPE DATA INSERTION SCRIPT
-INSERT INTO public.transaction_type ( code, description, created_by, created_at, updated_by, updated_at, active ) VALUES ( 'INGRESO','Es el tipo de movimiento o transaccion para cuando ingresa dinero a alguna cuenta','system','2026-01-19 20:24:02.896','system','2026-01-19 20:24:02.896', true);
-
--- TRANSACTION_CATEGORY DATA INSERTION SCRIPT
-INSERT INTO public.transaction_category ( code, description, created_by, created_at, updated_by, updated_at, active ) VALUES ( 'NOMINA','Categoria de transaccion para movimientos relacionados con nomina o salarios','system','2026-01-19 20:24:02.896','system','2026-01-19 20:24:02.896', true);
-
--- ACCOUNT DATA INSERTION SCRIPT
-INSERT INTO public.accounts ( number_account, financial_institution_name, created_by, created_at, updated_by, updated_at, active ) VALUES ( 1234567,'BANCO UNION','system','2026-01-19 20:24:02.896','system','2026-01-19 20:24:02.896', true);
-INSERT INTO public.accounts ( number_account, financial_institution_name, created_by, created_at, updated_by, updated_at, active ) VALUES ( 9876543,'BANCO MERCANTIL','system','2026-01-19 20:24:02.896','system','2026-01-19 20:24:02.896', true);
+---- TRANSACTION TYPE DATA INSERTION SCRIPT
+--INSERT INTO public.transaction_type ( code, description, created_by, created_at, updated_by, updated_at, active ) VALUES ( 'INGRESO','Es el tipo de movimiento o transaccion para cuando ingresa dinero a alguna cuenta','system','2026-01-19 20:24:02.896','system','2026-01-19 20:24:02.896', true);
+--INSERT INTO public.transaction_type ( code, description, created_by, created_at, updated_by, updated_at, active ) VALUES ( 'EGRESO','Es el tipo de movimiento o transaccion para cuando sale dinero de alguna cuenta','system','2026-01-19 20:24:02.896','system','2026-01-19 20:24:02.896', true);
+---- TRANSACTION TYPE
+--
+---- TRANSACTION_CATEGORY DATA INSERTION SCRIPT
+--INSERT INTO public.transaction_category ( code, description, created_by, created_at, updated_by, updated_at, active ) VALUES ( 'NOMINA','Categoria de transaccion para movimientos relacionados con nomina o salarios','system','2026-01-19 20:24:02.896','system','2026-01-19 20:24:02.896', true);
+--INSERT INTO public.transaction_category ( code, description, created_by, created_at, updated_by, updated_at, active ) VALUES ( 'SERVICIOS','Categoria de transaccion para movimientos relacionados con pagos de servicios','system','2026-01-19 20:24:02.896','system','2026-01-19 20:24:02.896', true);
+--INSERT INTO public.transaction_category ( code, description, created_by, created_at, updated_by, updated_at, active ) VALUES ( 'COMPRAS','Categoria de transaccion para movimientos relacionados con compras o adquisiciones','system','2026-01-19 20:24:02.896','system','2026-01-19 20:24:02.896', true);
+--INSERT INTO public.transaction_category ( code, description, created_by, created_at, updated_by, updated_at, active ) VALUES ( 'OTROS','Categoria de transaccion para movimientos relacionados con otros tipos de transacciones no especificadas','system','2026-01-19 20:24:02.896','system','2026-01-19 20:24:02.896', true);
+--
+---- ACCOUNT DATA INSERTION SCRIPT
+--INSERT INTO public.accounts ( number_account, financial_institution_name, created_by, created_at, updated_by, updated_at, active ) VALUES ( 1234567,'BANCO UNION','system','2026-01-19 20:24:02.896','system','2026-01-19 20:24:02.896', true);
+--INSERT INTO public.accounts ( number_account, financial_institution_name, created_by, created_at, updated_by, updated_at, active ) VALUES ( 9876543,'BANCO MERCANTIL','system','2026-01-19 20:24:02.896','system','2026-01-19 20:24:02.896', true);
+--INSERT INTO public.accounts ( number_account, financial_institution_name, created_by, created_at, updated_by, updated_at, active ) VALUES ( 4567891,'BANCO NACIONAL','system','2026-01-19 20:24:02.896','system','2026-01-19 20:24:02.896', true);
+--
+---- TRANSACTION DATA INSERTION SCRIPT
+--INSERT INTO public.transactions ( description, quantity, unit_price, total_amount, id_account, id_transaction_type, id_transaction_category, created_by, created_at, updated_by, updated_at, active ) VALUES ( 'Pago de nomina mensual',10,1500.00,15000.00,1,1,1,'system','2026-01-19 20:24:02.896','system','2026-01-19 20:24:02.896', true);

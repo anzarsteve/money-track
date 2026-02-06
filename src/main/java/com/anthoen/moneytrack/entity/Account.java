@@ -17,7 +17,7 @@ public class Account extends Audit {
     private Integer id;
 
     @Column(name = "number_account")
-    private Long numberAccount;
+    private String numberAccount;
 
     @Column(name = "financial_institution_name", length = 150)
     private String financialInstitutionName;
